@@ -1,12 +1,19 @@
 package com.example.translator.models
 
 class User {
-    var userName: String? = null
-    var profileImage: String? = null
+    var firstname: String? = null
+    var profileimage: String? = null
+    var email:String ?=null
+    var address:String ?=null
+    var lastname:String ?=null
+
 
     constructor() {}
-    constructor(userName: String?, profileImage: String?) {
-        this.userName = userName
-        this.profileImage = profileImage
+    constructor(firstname: String?, profileimage: String?,email:String ,address:String ,lastname:String) {
+        this.firstname = firstname
+        this.profileimage = profileimage
+        this.email=email
+        this.address=address
+        this.lastname=lastname
     }
 }
