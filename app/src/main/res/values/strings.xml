@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Translator</string>
+    <string name="happy_birthday_noel">Happy Birthday, Noel</string>
+    <string name="from_lloyd">From lloyd</string>
+    <string name="todo">TODO</string>
+    <string name="hello_world">hello world</string>
+    <string name="button">roll</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome</string>
+    <string name="signin">SignIn</string>
+    <string name="signup">SignUp</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_confirmpassword_hint">Confirm Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="login_name_hint">Name</string>
+    <string name="login_surname_hint">Surname</string>
+    <string name="login_mobile_number_hint">Mobile Number</string>
+    <string name="sign_in">SignIn</string>
+    <string name="login">SignIn</string>
+    <string name="register1">SignUp</string>
+    <string name="signup1">Signup</string>
+    <string name="have_account">Already have an account.SignIn</string>
 </resources>
