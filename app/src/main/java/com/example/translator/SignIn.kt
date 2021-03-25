@@ -15,7 +15,7 @@ class SignIn : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.sign_in, container, false)
+        return inflater.inflate(R.layout.sign_in, container, false);
     }
 
 
