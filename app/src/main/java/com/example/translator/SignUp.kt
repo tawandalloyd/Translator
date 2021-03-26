@@ -107,6 +107,7 @@ class SignUp : Fragment() {
 
     fun redirectScreen(){
         val  intent =Intent(context,Home::class.java);
+        startActivity(intent);
 
     }
 
