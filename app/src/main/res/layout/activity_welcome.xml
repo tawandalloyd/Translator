@@ -11,7 +11,8 @@
         tools:context=".Welcome"
         >
 
-
+    <include
+        layout="@layout/context_fragment"/>
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navView"
@@ -21,6 +22,8 @@
             app:headerLayout="@layout/nav_header"
             android:fitsSystemWindows="true"
             app:menu="@menu/navdrawer" />
+
+
     </androidx.drawerlayout.widget.DrawerLayout>
 
 
