@@ -38,4 +38,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="_todo">TODO</string>
+    <string name="open_gallery">open gallery</string>
+    <string name="take_photo">take photo</string>
 </resources>

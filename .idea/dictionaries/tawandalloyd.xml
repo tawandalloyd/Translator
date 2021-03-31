@@ -2,6 +2,7 @@
   <dictionary name="tawandalloyd">
     <words>
       <w>confirmpassword</w>
+      <w>fileprovider</w>
       <w>signin</w>
       <w>signinbutton</w>
       <w>signup</w>
