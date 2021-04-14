@@ -1,4 +1,4 @@
-package com.example.translator
+package com.example.translator.nav_drawer
 
 import android.Manifest
 import android.content.Intent
@@ -14,18 +14,22 @@ import android.os.Environment
 import android.provider.MediaStore
 
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
 
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.GravityCompat
 
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.translator.BuildConfig
+import com.example.translator.R
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_welcome.*
-import kotlinx.android.synthetic.main.nav_header.*
 import java.io.File
 import java.io.IOException
 import java.util.*
@@ -33,6 +37,7 @@ import java.util.*
 class Welcome : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
     lateinit var toggle: ActionBarDrawerToggle
     lateinit var currentPhotoPath: String
+     lateinit var uploadPhoto:ImageView
 
     private lateinit var drawerLayout: DrawerLayout
     private val REQUEST_PERMISSION = 100
@@ -42,27 +47,18 @@ class Welcome : AppCompatActivity(), NavigationView.OnNavigationItemSelectedList
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        setContentView(R.layout.activity_welcome)
+       drawerLayout= findViewById(R.id.drawer_layout)
 
-        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open, R.string.close)
+        uploadPhoto = findViewById(R.id.upload_photo)
+
+        toggle = ActionBarDrawerToggle(this,drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         navView.setNavigationItemSelectedListener (this)
         val fragment = supportFragmentManager.beginTransaction()
-        fragment.replace(R.id.fragment_container,fragment_drawer_home()).commit()
-
-
-        camera.setOnClickListener {
-            if (VERSION.SDK_INT >= VERSION_CODES.N) {
-                openCamera()
-            }
-        }
-        gallery.setOnClickListener {
-            openGallery()
-        }
+        fragment.replace(R.id.fragment_container, fragment_drawer_home()).commit()
 
     }
     @RequiresApi(VERSION_CODES.N)
@@ -132,11 +128,11 @@ class Welcome : AppCompatActivity(), NavigationView.OnNavigationItemSelectedList
         if (resultCode == RESULT_OK) {
             if (requestCode == REQUEST_IMAGE_CAPTURE) {
                 val uri = Uri.parse(currentPhotoPath)
-                upload_photo.setImageURI(uri)
+                uploadPhoto.setImageURI(uri)
             }
             else if (requestCode == REQUEST_PICK_IMAGE) {
                 val uri = data?.data
-                upload_photo.setImageURI(uri)
+                uploadPhoto.setImageURI(uri)
             }
         }
     }
@@ -156,17 +152,17 @@ class Welcome : AppCompatActivity(), NavigationView.OnNavigationItemSelectedList
             R.id.home_fragment ->{
                 setToolbarTitle("Home")
                 val fragment = supportFragmentManager.beginTransaction()
-                fragment.replace(R.id.fragment_container,fragment_drawer_home()).commit()
+                fragment.replace(R.id.fragment_container, fragment_drawer_home()).commit()
             }
             R.id.about -> {
                 setToolbarTitle("About Us")
                 val fragment = supportFragmentManager.beginTransaction()
-                fragment.replace(R.id.fragment_container,fragment_drawer_aboutus()).commit()
+                fragment.replace(R.id.fragment_container, fragment_drawer_aboutus()).commit()
             }
             R.id.profile -> {
                 setToolbarTitle("Profile")
                 val fragment = supportFragmentManager.beginTransaction()
-                fragment.replace(R.id.fragment_container,fragment_drawer_profile()).commit()
+                fragment.replace(R.id.fragment_container, fragment_drawer_profile()).commit()
             }
         }
 
@@ -176,5 +172,20 @@ class Welcome : AppCompatActivity(), NavigationView.OnNavigationItemSelectedList
     }
     fun setToolbarTitle(title:String){
         supportActionBar?.title = title
+    }
+
+    fun showDialog(view: View) {
+        val images = arrayOf("take photo", "open gallery")
+       AlertDialog.Builder(this)
+            .setTitle("Upload photo")
+            .setItems(images){ dialog, which ->
+             when (which){
+                 0 -> if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                     openCamera()
+                 }
+                 1 -> openGallery()
+             }
+            }
+            .show()
     }
 }

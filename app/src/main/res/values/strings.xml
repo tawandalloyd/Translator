@@ -41,4 +41,8 @@
     <string name="_todo">TODO</string>
     <string name="open_gallery">open gallery</string>
     <string name="take_photo">take photo</string>
+    <string name="home">home</string>
+    <string name="profile">profile</string>
+    <string name="about_us">about us</string>
+    <string name="logout">logout</string>
 </resources>

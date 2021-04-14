@@ -6,7 +6,7 @@
     app:startDestination="@id/home2">
     <fragment
         android:id="@+id/home2"
-        android:name="com.example.translator.Home"
+        android:name="com.example.translator.login.Home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -26,12 +26,20 @@
     </fragment>
     <fragment
         android:id="@+id/signIn2"
-        android:name="com.example.translator.SignIn"
+        android:name="com.example.translator.login.SignIn"
         android:label="sign_in"
-        tools:layout="@layout/sign_in" />
+        tools:layout="@layout/sign_in" >
+        <action
+            android:id="@+id/action_signIn2_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
     <fragment
         android:id="@+id/signUp"
-        android:name="com.example.translator.SignUp"
+        android:name="com.example.translator.login.SignUp"
         android:label="sign_up"
-        tools:layout="@layout/sign_up" />
+        tools:layout="@layout/sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_signIn2"
+            app:destination="@id/signIn2" />
+    </fragment>
 </navigation>

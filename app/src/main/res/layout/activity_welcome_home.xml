@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WelcomeHome"
+    >
+    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:paddingTop="16dp"
+        >
+
+                <ImageView
+                    android:layout_width="278dp"
+                    android:layout_height="229dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/home" />
+
+                <TextView
+                    android:layout_width="158dp"
+                    android:layout_height="61dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="132dp"
+                    android:text="@string/welcome"
+                    android:textAllCaps="true"
+                    android:textSize="30sp" />
+
+
+        <Button
+                    android:layout_marginTop="250dp"
+                    android:id="@+id/signin"
+                    style="@style/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="@string/signin"
+                    />
+
+                <Button
+                    android:id="@+id/signup_button"
+                    style="@style/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_marginBottom="200dp"
+                    android:text="@string/signup" />
+
+
+
+            </LinearLayout>
+
+</layout>
