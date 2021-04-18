@@ -1,4 +1,4 @@
-package com.example.translator.nav_drawer
+package com.example.investors.nav_drawer
 
 import android.Manifest
 import android.content.Intent
@@ -26,8 +26,8 @@ import androidx.core.content.FileProvider
 import androidx.core.view.GravityCompat
 
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.translator.BuildConfig
-import com.example.translator.R
+import com.example.investors.BuildConfig
+import com.example.investors.R
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_welcome.*
 import java.io.File
@@ -55,6 +55,7 @@ class Welcome : AppCompatActivity(), NavigationView.OnNavigationItemSelectedList
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         navView.setNavigationItemSelectedListener (this)
         val fragment = supportFragmentManager.beginTransaction()

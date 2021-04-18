@@ -1,4 +1,4 @@
-package com.example.translator
+package com.example.investors
 
 import org.junit.Test
 

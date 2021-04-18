@@ -1,11 +1,11 @@
-package com.example.translator.nav_drawer
+package com.example.investors.nav_drawer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.translator.R
+import com.example.investors.R
 
 class fragment_drawer_home : Fragment() {
 

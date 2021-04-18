@@ -26,7 +26,7 @@
     </style>
 
     <style name="loginHeader">
-        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textColor">@color/greyHex</item>
         <item name="android:textSize">@dimen/headerTextSize</item>
         <item name="android:textStyle">bold</item>
     </style>

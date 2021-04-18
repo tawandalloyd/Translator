@@ -1,11 +1,9 @@
-package com.example.translator
+package com.example.investors
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
-import com.example.translator.databinding.ActivityMainBinding
+import com.example.investors.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

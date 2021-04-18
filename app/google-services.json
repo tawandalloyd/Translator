@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "803612232478",
-    "project_id": "investor-investee",
-    "storage_bucket": "investor-investee.appspot.com"
+    "project_number": "93535831711",
+    "project_id": "investors-685bd",
+    "storage_bucket": "investors-685bd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:803612232478:android:0d4bb1286d09621ec1970f",
+        "mobilesdk_app_id": "1:93535831711:android:349b00b632a9c7d33044aa",
         "android_client_info": {
-          "package_name": "com.example.translator"
+          "package_name": "com.example.investors"
         }
       },
       "oauth_client": [
         {
-          "client_id": "803612232478-k99mdpft1a8sjfqpqa5eip4ini1n9u9j.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.translator",
-            "certificate_hash": "87e0ae33d4818ae1ed0d78497691b42ff0e83ee8"
-          }
-        },
-        {
-          "client_id": "803612232478-33h19ts4acucmg81rucvm9ofp9bv31vb.apps.googleusercontent.com",
+          "client_id": "93535831711-cpj3gp465f0q2r31fj5sqhu495iu23cd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAEIFX1cU8I7DgZw2oggNPrYBO4Q9KG1VA"
+          "current_key": "AIzaSyARhweLsfiNSMtW5xwX7jCYCyR2tm1mfzg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "803612232478-33h19ts4acucmg81rucvm9ofp9bv31vb.apps.googleusercontent.com",
+              "client_id": "93535831711-cpj3gp465f0q2r31fj5sqhu495iu23cd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

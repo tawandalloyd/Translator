@@ -6,7 +6,7 @@
     app:startDestination="@id/home2">
     <fragment
         android:id="@+id/home2"
-        android:name="com.example.translator.login.Home"
+        android:name="com.example.investors.login.Home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/signIn2"
-        android:name="com.example.translator.login.SignIn"
+        android:name="com.example.investors.login.SignIn"
         android:label="sign_in"
         tools:layout="@layout/sign_in" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUp"
-        android:name="com.example.translator.login.SignUp"
+        android:name="com.example.investors.login.SignUp"
         android:label="sign_up"
         tools:layout="@layout/sign_up" >
         <action

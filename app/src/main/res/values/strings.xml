@@ -45,4 +45,9 @@
     <string name="profile">profile</string>
     <string name="about_us">about us</string>
     <string name="logout">logout</string>
+    <string name="upload_project">upload project</string>
+    <string name="my_project">my project</string>
+    <string name="shortcuts">My Shortcuts</string>
+    <string name="textview">TextView</string>
+    <string name="textview15">Airtime</string>
 </resources>

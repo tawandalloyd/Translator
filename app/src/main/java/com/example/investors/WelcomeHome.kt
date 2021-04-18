@@ -1,14 +1,13 @@
-package com.example.translator
+package com.example.investors
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.translator.login.Login
-import com.example.translator.login.SignUp
-import com.example.translator.nav_drawer.Welcome
+import com.example.investors.login.Login
+import com.example.investors.login.SignUp
+import com.example.investors.nav_drawer.Welcome
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -53,7 +52,6 @@ class WelcomeHome : AppCompatActivity() {
         signup_button.setOnClickListener {
             val intent= Intent(this, SignUp::class.java)
             startActivity(intent)
-
         }
 
         signin.setOnClickListener {

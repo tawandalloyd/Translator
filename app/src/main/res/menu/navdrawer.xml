@@ -1,24 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<group
+    android:id="@+id/group_item1"
+    android:checkableBehavior="single"
+    >
     <item
         android:id= "@+id/home_fragment"
         android:icon="@drawable/ic_home"
         android:title="@string/home"
-
         />
+</group>
+    <group
+        android:id="@+id/group_item2"
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/Upload_project"
+            android:icon="@drawable/ic_label_important"
+            android:title="@string/my_project" />
+    </group>
+    <group
+        android:id="@+id/group_item3"
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/my_project"
+            android:icon="@drawable/ic_cloud_upload"
+            android:title="@string/upload_project" />
+    </group>
+
+<group
+    android:id="@+id/group_item4"
+    android:checkableBehavior="single"
+    >
     <item
         android:id= "@+id/profile"
         android:icon="@drawable/ic_people"
         android:title="@string/profile"
 
         />
+</group>
+<group
+    android:id="@+id/group_item5"
+    android:checkableBehavior="single"
+    >
     <item
         android:id="@+id/about"
         android:icon="@drawable/ic_about"
         android:title="@string/about_us" />
-    <item
-        android:id="@+id/logout"
-        android:icon="@drawable/ic_lock"
-        android:title="@string/logout" />
+</group>
+
+
+    <group
+        android:id="@+id/group_item6"
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_lock"
+            android:title="@string/logout" />
+    </group>
+
+
 </menu>

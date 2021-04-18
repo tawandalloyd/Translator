@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
 
+    tools:context=".login.SignUp"
+    android:background="@drawable/login_bk"
+    android:focusableInTouchMode="true"
+    android:layout_height="wrap_content" android:layout_width="match_parent">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="24dp"
@@ -12,11 +18,12 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".login.SignUp"
+
 
 
         >
@@ -34,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/loginViewsMargin"
-        android:background="@drawable/fui_idp_button_background_github"
+        android:background="@drawable/rounded_edittext"
         android:drawableStart="@drawable/ic_person"
         android:drawablePadding="12dp"
         android:hint="@string/login_name_hint"
@@ -52,8 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/loginViewsMargin"
         android:autofillHints=""
-        android:background="@drawable/fui_idp_button_background_github"
         android:drawableStart="@drawable/ic_person"
+        android:background="@drawable/rounded_edittext"
         android:drawablePadding="12dp"
         android:hint="@string/login_surname_hint"
         android:inputType="textPersonName"
@@ -71,8 +78,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/loginViewsMargin"
         android:autofillHints=""
-        android:background="@drawable/fui_idp_button_background_github"
         android:drawableStart="@drawable/ic_phone"
+        android:background="@drawable/rounded_edittext"
         android:drawablePadding="12dp"
         android:hint="@string/login_mobile_number_hint"
         android:inputType="phone"
@@ -89,8 +96,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/loginViewsMargin"
         android:autofillHints=""
-        android:background="@drawable/fui_idp_button_background_github"
         android:drawableStart="@drawable/ic_email"
+        android:background="@drawable/rounded_edittext"
         android:drawablePadding="12dp"
         android:hint="@string/login_email_hint"
         android:inputType="textEmailAddress"
@@ -108,8 +115,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/loginViewsMargin"
         android:autofillHints=""
-        android:background="@drawable/fui_idp_button_background_github"
         android:drawableStart="@drawable/ic_lock"
+        android:background="@drawable/rounded_edittext"
         android:drawablePadding="12dp"
         android:hint="@string/login_password_hint"
         android:inputType="textPassword"
@@ -129,10 +136,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/loginViewsMargin"
         android:autofillHints=""
-        android:background="@drawable/fui_idp_button_background_github"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="12dp"
         android:hint="@string/login_confirmpassword_hint"
+        android:background="@drawable/rounded_edittext"
         android:inputType="textPassword"
         android:maxLines="1"
         android:paddingStart="12dp"
@@ -143,7 +150,7 @@
 
 
         <Button
-            android:id="@+id/cirLoginButton"
+            android:id="@+id/cirSignUpButton"
             style="@style/loginButton"
             android:layout_gravity="right"
             android:layout_marginTop="@dimen/loginViewsMargin"
@@ -155,8 +162,9 @@
             android:layout_marginTop="@dimen/loginViewsMargin"
             android:text="@string/have_account"
             android:textAlignment="textEnd"
-            android:textColor="@color/whiteTextColor"
+            android:textColor="@color/greyHex"
             android:textStyle="bold" />
 
     </LinearLayout>
 
+</ScrollView>

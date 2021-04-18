@@ -1,4 +1,4 @@
-package com.example.translator.models
+package com.example.investors.models
 
 class User {
     var firstname: String? = null
