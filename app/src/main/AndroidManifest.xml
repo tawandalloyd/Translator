@@ -20,9 +20,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.investors.login.Login" android:parentActivityName="com.example.investors.WelcomeHome"/>
-        <activity android:name="com.example.investors.login.SignUp" android:parentActivityName="com.example.investors.WelcomeHome" />
-        <activity android:name="com.example.investors.MainActivity" />
+        <activity android:name=".Home"></activity>
+        <activity
+            android:name=".login.Login"
+            android:parentActivityName=".WelcomeHome" />
+        <activity
+            android:name=".login.SignUp"
+            android:parentActivityName=".WelcomeHome" />
+        <activity android:name=".MainActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -34,8 +39,8 @@
                 android:resource="@xml/file_provider_paths" />
         </provider>
 
-        <activity android:name="com.example.investors.nav_drawer.Welcome" />
-        <activity android:name="com.example.investors.WelcomeHome" >
+        <activity android:name=".nav_drawer.Welcome" />
+        <activity android:name=".WelcomeHome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

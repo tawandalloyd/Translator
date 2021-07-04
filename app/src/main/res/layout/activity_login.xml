@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/loginViewsMargin"
             android:autofillHints=""
-            android:background="@drawable/fui_idp_button_background_github"
+            android:background="@drawable/custom_input"
             android:drawableStart="@drawable/ic_email"
             android:drawablePadding="12dp"
             android:hint="@string/login_email_hint"
@@ -46,7 +46,9 @@
             android:paddingStart="12dp"
             android:paddingTop="6dp"
             android:paddingEnd="12dp"
-            android:paddingBottom="6dp" />
+            android:paddingBottom="6dp"
+
+            />
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -54,8 +56,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/loginViewsMargin"
             android:autofillHints=""
-            android:background="@drawable/fui_idp_button_background_github"
             android:drawableStart="@drawable/ic_lock"
+            android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
             android:hint="@string/login_password_hint"
             android:inputType="textPassword"

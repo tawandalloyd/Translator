@@ -30,21 +30,21 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="132dp"
                     android:text="@string/welcome"
+                    android:textStyle="italic"
                     android:textAllCaps="true"
                     android:textSize="30sp" />
 
 
         <Button
-                    android:layout_marginTop="250dp"
-                    android:id="@+id/signin"
-                    style="@style/loginButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:text="@string/signin"
-                    />
+            android:id="@+id/signin"
+            style="@style/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_marginTop="250dp"
+            android:text="@string/signin" />
 
-                <Button
+        <Button
                     android:id="@+id/signup_button"
                     style="@style/loginButton"
                     android:layout_width="match_parent"
