@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.investors.Home
 import com.example.investors.R
+import com.example.investors.firestore.FirestoreClass
+import com.example.investors.models.User
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
@@ -50,6 +52,15 @@ class SignUp : AppCompatActivity() {
                         if (task.isSuccessful) {
 
                             val firebaseUser : FirebaseUser = task.result!!.user!!
+
+                            val user = User(
+                                firebaseUser.uid,
+                                editTextName.text.toString().trim(),
+                                editTextsurname.text.toString().trim(),
+                                editTextEmail.text.toString().trim(),
+                            )
+                             FirestoreClass().registerUser(this,user)
+
                             Toast.makeText(
                                 this,
                                 "user registered",
@@ -79,6 +90,10 @@ class SignUp : AppCompatActivity() {
 
     }
 
+    fun registerSuccessful(){
+
+        Toast.makeText(this@SignUp, "you are registered successfully", Toast.LENGTH_SHORT).show()
+    }
 
 
 }
