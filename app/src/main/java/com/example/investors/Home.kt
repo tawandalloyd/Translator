@@ -1,5 +1,6 @@
 package com.example.investors
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,14 +14,19 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val email : TextView = findViewById(R.id.textView3)
-        val user  : TextView = findViewById(R.id.textView8)
+        //val email : TextView = findViewById(R.id.textView3)
+       // val user  : TextView = findViewById(R.id.textView8)
 
-        val emailId = intent.getStringExtra("email")
-        val userId = intent.getStringExtra("user_id")
+       // val emailId = intent.getStringExtra("email")
+        //val userId = intent.getStringExtra("user_id")
 
-        email.text= "Email ID :: $emailId"
-        user.text= "userId:: $userId"
+        //email.text= "Email ID :: $emailId"
+        //user.text= "userId:: $userId"
+
+        val sharedPreferences = getSharedPreferences(Constants.PREFERENCES,Context.MODE_PRIVATE)
+        val username = sharedPreferences.getString(Constants.LOGGED_IN_USERNAME, "")!!
+        textView3.text= "hello $username"
+
 
 
         button.setOnClickListener {

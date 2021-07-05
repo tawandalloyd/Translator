@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import com.example.investors.Home
 import com.example.investors.R
+import com.example.investors.firestore.FirestoreClass
+import com.example.investors.models.User
 import com.example.investors.nav_drawer.Welcome
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -46,20 +48,21 @@ class Login : AppCompatActivity() {
 
                         task ->
                     if (task.isSuccessful) {
-
+                       // getting the user details
+                        FirestoreClass().getUserDetails(this@Login)
 
                         Toast.makeText(
                             this,
                             "user logged in",
                             Toast.LENGTH_SHORT
                         ).show()
-
-                        val intent = Intent( this, Home::class.java)
-                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent. FLAG_ACTIVITY_CLEAR_TASK
-                        intent.putExtra("user_id ",FirebaseAuth.getInstance().currentUser!!.uid)
-                        intent.putExtra("email", email)
-                        startActivity(intent)
-                        finish()
+                        // passing user details to another activity using intents
+                       // val intent = Intent( this, Home::class.java)
+                        //intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent. FLAG_ACTIVITY_CLEAR_TASK
+                        //intent.putExtra("user_id ",FirebaseAuth.getInstance().currentUser!!.uid)
+                        //intent.putExtra("email", email)
+                        //startActivity(intent)
+                        //finish()
                     } else{
 
                         Toast.makeText(
@@ -74,6 +77,17 @@ class Login : AppCompatActivity() {
                     Log.d("SignUp","failed to create user ${it.message}")
                 }
         }
+
+    }
+
+    fun userLoggedInSuccess(user: User){
+        // print user details in the log as of now
+        Log.i("first Name", user.firstname)
+        Log.i("surname", user.surname)
+        Log.i("Email", user.email)
+
+        startActivity(Intent(this@Login,Home::class.java))
+        finish()
 
     }
 

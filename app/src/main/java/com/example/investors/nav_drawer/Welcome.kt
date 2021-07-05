@@ -28,7 +28,9 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.investors.BuildConfig
 import com.example.investors.R
+import com.example.investors.login.Login
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_welcome.*
 import java.io.File
 import java.io.IOException
@@ -164,6 +166,11 @@ class Welcome : AppCompatActivity(), NavigationView.OnNavigationItemSelectedList
                 setToolbarTitle("Profile")
                 val fragment = supportFragmentManager.beginTransaction()
                 fragment.replace(R.id.fragment_container, fragment_drawer_profile()).commit()
+            }
+            R.id.logout ->{
+                FirebaseAuth.getInstance().signOut()
+                startActivity(Intent(this, Login::class.java ))
+                finish()
             }
         }
 
