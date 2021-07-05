@@ -3,6 +3,7 @@ package com.example.investors.firestore
 import android.util.Log
 import com.example.investors.login.SignUp
 import com.example.investors.models.User
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
@@ -28,6 +29,19 @@ class FirestoreClass {
             }
 
 
+    }
+
+    fun getCurrentUserId(): String {
+        //instance of current user using firebase
+       val currentUser = FirebaseAuth.getInstance().currentUser
+
+        // a variable to assign currentUserID if it is not null
+        var currentUserID = ""
+        if (currentUser!= null) {
+            currentUserID = currentUser.uid
+        }
+
+       return currentUserID
     }
 
 
