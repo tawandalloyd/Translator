@@ -86,6 +86,11 @@ class FirestoreClass {
 
 
                     }
+                    is SignUp -> {
+                        if (user!= null){
+                            activity.Details(user)
+                        }
+                    }
                 }
             }
 

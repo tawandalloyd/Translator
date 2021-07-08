@@ -5,13 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.investors.Home
 import com.example.investors.R
 import com.example.investors.firestore.FirestoreClass
 import com.example.investors.models.User
-import com.example.investors.nav_drawer.Welcome
+import com.example.investors.quizz.QuizzHome
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
@@ -86,8 +84,18 @@ class Login : AppCompatActivity() {
         Log.i("surname", user.surname)
         Log.i("Email", user.email)
 
-        startActivity(Intent(this@Login,Home::class.java))
-        finish()
+        val intent= Intent(this, QuizzHome::class.java)
+        startActivity(intent)
+
+
+       /* if (user.profileCompleted== 0){
+            val intent= Intent(this, Profile::class.java)
+            intent.putExtra(Constants.USER_DETAILS, user)
+            startActivity(intent)
+        } else {
+
+            startActivity(Intent(this@Login, Home::class.java))
+        }*/
 
     }
 

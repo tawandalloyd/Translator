@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     tools:context=".login.SignUp"
-    android:background="@drawable/login_bk"
     android:focusableInTouchMode="true"
     android:layout_height="wrap_content" android:layout_width="match_parent">
 
