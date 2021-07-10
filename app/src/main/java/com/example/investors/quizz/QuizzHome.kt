@@ -12,6 +12,7 @@ class QuizzHome : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quizz_home)
+
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         Btn_submit.setOnClickListener {
@@ -20,6 +21,7 @@ class QuizzHome : AppCompatActivity() {
             }
             else{
                 val intent = Intent(this,QuizzQuestions::class.java)
+                 intent.putExtra(Constants.USER_NAME,user.text.toString())
                 startActivity(intent)
                 finish()
             }

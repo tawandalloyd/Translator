@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".quizz.QuizzQuestions">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="what country does this flag belong to"
+            android:textColor="@color/greyHex"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/italy"/>
+        
+        <LinearLayout
+            android:id="@+id/progress_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style= "?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="6"
+                android:minHeight="50dp"
+                android:progress="0"
+                android:indeterminate="false"
+                />
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textColorHint="@color/grey"
+                android:textSize="14sp"
+                tools:text="0/6"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent" android:id="@+id/option_1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"  android:background="@drawable/default_option"
+            android:gravity="center" android:padding="15dp" android:textColor="@color/greyHex"
+            android:textSize="18sp"  tools:text = "Apple"/>     <TextView
+        android:layout_width="match_parent" android:id="@+id/option2"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"  android:background="@drawable/default_option"
+        android:gravity="center" android:padding="15dp" android:textColor="@color/greyHex"
+        android:textSize="18sp"  tools:text = "Apple"/>    <TextView
+        android:layout_width="match_parent" android:id="@+id/option3"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"  android:background="@drawable/default_option"
+        android:gravity="center" android:padding="15dp" android:textColor="@color/greyHex"
+        android:textSize="18sp"  tools:text = "Apple"/>    <TextView
+        android:layout_width="match_parent" android:id="@+id/option4"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"  android:background="@drawable/default_option"
+        android:gravity="center" android:padding="15dp" android:textColor="@color/greyHex"
+        android:textSize="18sp"  tools:text = "Apple"/>  <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/btn_submit" android:background="@drawable/login_button_bk" android:text="Submit" android:textColor ="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
+

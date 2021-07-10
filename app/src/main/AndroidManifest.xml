@@ -22,9 +22,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".quizz.QuizzQuestions"
-            android:screenOrientation="portrait"
-            ></activity>
+        <activity android:name=".quizz.Quizzfail"></activity>
+        <activity android:name=".quizz.QuizzResult" />
+        <activity
+            android:name=".quizz.QuizzQuestions"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".quizz.QuizzHome"
             android:screenOrientation="portrait"
@@ -58,7 +60,7 @@
         </provider>
 
         <activity android:name=".nav_drawer.Welcome" />
-        <activity android:name=".WelcomeHome"></activity>
+        <activity android:name=".WelcomeHome" />
     </application>
 
 </manifest>

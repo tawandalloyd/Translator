@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.investors.Constants
+import com.example.investors.Home
+import com.example.investors.Profile
 import com.example.investors.R
 import com.example.investors.firestore.FirestoreClass
 import com.example.investors.models.User
@@ -84,18 +87,17 @@ class Login : AppCompatActivity() {
         Log.i("surname", user.surname)
         Log.i("Email", user.email)
 
-        val intent= Intent(this, QuizzHome::class.java)
-        startActivity(intent)
 
 
-       /* if (user.profileCompleted== 0){
+
+       if (user.profileCompleted== 0){
             val intent= Intent(this, Profile::class.java)
             intent.putExtra(Constants.USER_DETAILS, user)
             startActivity(intent)
         } else {
 
             startActivity(Intent(this@Login, Home::class.java))
-        }*/
+        }
 
     }
 
